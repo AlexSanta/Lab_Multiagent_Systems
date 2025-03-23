@@ -1,13 +1,11 @@
 ## Task description
 
 The laboratory activity consist in training an agent to explore an environment modeled as a grid of cells. Each cell has a **level of knowledge** ranging from 0 to 1. The agent has a 
-**range of vision**. The knowledge levels of all cells within the vision range will be set to 1, while the remaining ones will be multiplied by a forgetfulness factor. 
+**range of vision**. The knowledge levels of all cells within the vision range will be set to 1, while the remaining ones will be multiplied by a forgetfulness factor.<br>
 At each step, the agent can move one cell to the right, left, up or down. The environment is updated accordingly and the sum of the elements of the difference between the new environment 
-and the old one will constitute the reward that the agent obtains at that step. 
-The state of the system is represented by the **position** (i.e. the row and the column) of the agent in the environment and by the **feature vector** returned by a **Convolutional Neural 
-Network** that takes as input a preprocessed image representing the environment. The state will be the input of a **Deep-Q Network** which will output the Q-values approximations of the 
-four possible actions the agent can take in that state.
-During the training, the **ε-greedy policy** will be applied.
+and the old one will constitute the reward that the agent obtains at that step.<br> 
+The state of the system is represented by the **position** (i.e. the row and the column) of the agent in the environment and by the **feature vector** returned by a **Convolutional Neural Network** that takes as input a preprocessed image representing the environment. The state will be the input of a **Deep-Q Network** which will output the Q-values approximations of the four possible actions the agent can take in that state.<br>
+During the training, the **ε-greedy policy** will be applied.<br>
 The task is modeled as an **episodic task**, therefore each episode has the same finite duration.
 
 ## Code

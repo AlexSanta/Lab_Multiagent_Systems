@@ -8,7 +8,7 @@ The state of the system is represented by the **position** (i.e. the row and the
 During the training, the **ε-greedy policy** will be applied.<br>
 The task is modeled as an **episodic task**, therefore each episode has the same finite duration.
 
-## Code
+## Code structure
 
 Inside the code, there are two different classes:
 - the ***DQN*** class defines the structure of the Deep-Q Networks. Specifically, this is a Multi-layer Perceptron with three linear layers. After each layer, except the output one, a
@@ -17,7 +17,7 @@ Inside the code, there are two different classes:
   for the Deep-Q Networks. There are also several functions:
     - *\_init\_cnn*: initialize the CNN that will be used to get the feature vectors of the environment. That is a pretrained ResNet-18 without the fully connected layer
     - *preprocess\_img*: applies the necessary transformations to the image of the environment in order for it to be processed by the CNN
-    - *get\_state*: obtain the state of the system at the current step
+    - *get\_state*: obtains the state of the system at the current step
     - *choose\_action*: determines the next action that will be performed by the agent
     - *execute\_action*: makes the agent perform the chosen action, or makes it remain still if it would exit the environment
     - *update\_epsilon*: the ε parameter is updated through an exponential decay
